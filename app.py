@@ -16,8 +16,7 @@ app.secret_key = os.environ.get("SECRET_KEY", secrets.token_hex(16))
 # =============================================================================
 TIKTOK_CLIENT_KEY = os.environ.get("TIKTOK_CLIENT_KEY", "awkdujek122kz1rf")
 TIKTOK_CLIENT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "bWHmtjj6QxrJYfyw07rOqyGfjCbBddjD")
-REDIRECT_URI = os.environ.get("REDIRECT_URI", "https://your-app.onrender.com/callback")
-
+REDIRECT_URI = os.environ.get("REDIRECT_URI", "https://allakanai-demo.onrender.com/callback")
 # TikTok API endpoints
 TIKTOK_AUTH_URL = "https://www.tiktok.com/v2/auth/authorize/"
 TIKTOK_TOKEN_URL = "https://open.tiktokapis.com/v2/oauth/token/"
@@ -393,7 +392,11 @@ def dashboard():
 def logout():
     session.clear()
     return redirect("/")
-
+@app.route("/tiktokjJA0uDugeqcgJjXGt7AtL0tUUkOTTDpK.txt")
+  def tiktok_verify():
+      return "tiktokjJA0uDugeqcgJjXGt7AtL0tUUkOTTDpK", 200, {"Content-Type": "text/plain"}
+      
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
